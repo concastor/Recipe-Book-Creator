@@ -15,6 +15,7 @@ class Main:
     def show_window(self):
         self.form.setupUi(self.window)
         self.window.show()
+        self.window.setFixedSize(self.window.size())
         self.app.exec_()
 
 
