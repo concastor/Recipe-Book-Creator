@@ -7,7 +7,7 @@ class Main:
     def __init__(self):
         self.app = QApplication([])
         #loads ui from file
-        Form, Window = uic.loadUiType("images/splash-screen.jpg")
+        Form, Window = uic.loadUiType("main page.ui")
         self.form = Form()
         self.window = Window()
 
