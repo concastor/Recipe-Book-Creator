@@ -1,23 +1,21 @@
 from PyQt5.QtWidgets import QApplication
-from PyQt5 import uic
-
+from PyQt5 import uic, QtWidgets
+import sys
+from SplashUI import splash_ui
 
 class Main:
 
     def __init__(self):
-        self.app = QApplication([])
-        #loads ui from file
-        Form, Window = uic.loadUiType("main page.ui")
-        self.form = Form()
-        self.window = Window()
+        self.app = QApplication(sys.argv)
+        self.window = splash_ui()
 
-    #Displays the main window of the program
-    def show_window(self):
-        self.form.setupUi(self.window)
-        self.window.show()
+        #displays the splash screen
         self.window.setFixedSize(self.window.size())
         self.app.exec_()
 
-
 main = Main()
-main.show_window()
+
+
+
+
+
