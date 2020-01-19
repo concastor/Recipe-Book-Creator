@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>604</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -48,14 +48,25 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">   background-color: white;
+     <string notr="true">QPushButton#startButton {
+     background-color: white;
     border-style: outset;
     border-width: 2px;
     border-radius: 10px;
     border-color: black;
     font: bold 14px;
     min-width: 10em;
-    padding: 6px;</string>
+    padding: 6px;
+}
+QPushButton:pressed#startButton{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed#startButton{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+</string>
     </property>
     <property name="text">
      <string>Start Cooking</string>
@@ -64,10 +75,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-60</x>
-      <y>0</y>
-      <width>951</width>
-      <height>601</height>
+      <x>-50</x>
+      <y>-10</y>
+      <width>971</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -98,8 +109,30 @@
      <number>0</number>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>801</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+font: 48pt &quot;Sitka Subheading&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>RECIPE MAKER</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>startButton</zorder>
+   <zorder>label_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
