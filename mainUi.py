@@ -9,7 +9,19 @@ class main_ui(QtWidgets.QMainWindow):
 
         uic.loadUi("mainScreen.ui", self)
         self.parent = parent
-        # self.show()
+        #connect buttons to code
+        self.create_button = self.findChild(QtWidgets.QPushButton, 'CreateButton')
+        self.browse_button = self.findChild(QtWidgets.QPushButton, 'browseButton')
+
+        #connect buttons to functions
+        self.browse_button.clicked.connect(self.browse_button_clicked)
+        self.create_button.clicked.connect(self.create_button_clicked)
+
+    def create_button_clicked(self):
+        print("fuck")
+
+    def browse_button_clicked(self):
+        print("shit")
 
     def show_screen(self):
         self.show()
