@@ -3,9 +3,9 @@ from PyQt5 import uic, QtWidgets
 import sys
 
 
-class splash_ui(QtWidgets.QMainWindow):
+class SplashUi(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
-        super(splash_ui, self).__init__()
+        super(SplashUi, self).__init__()
         uic.loadUi("main page.ui", self)
         self.parent = parent
 
@@ -16,7 +16,7 @@ class splash_ui(QtWidgets.QMainWindow):
         self.show()
 
     def start_pressed(self):
-        self.parent.test()
+        self.parent.display_main_screen()
         self.hide()
 
 
