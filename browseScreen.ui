@@ -11,7 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Browse</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background=rgb(230, 170, 255)</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -62,8 +68,44 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+     background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    font: bold 14px;
+
+}
+QPushButton:pressed{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+QPushButton:checked{
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+}  
+
+
+
+</string>
+          </property>
           <property name="text">
            <string>Breakfast</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -91,8 +133,41 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+     background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    font: bold 14px;
+
+}
+QPushButton:pressed{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+QPushButton:checked{
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+}  
+
+
+
+</string>
+          </property>
           <property name="text">
            <string>Lunch</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -120,8 +195,41 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+     background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    font: bold 14px;
+
+}
+QPushButton:pressed{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+QPushButton:checked{
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+}  
+
+
+
+</string>
+          </property>
           <property name="text">
            <string>Dinner</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -149,8 +257,41 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+     background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    font: bold 14px;
+
+}
+QPushButton:pressed{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+QPushButton:checked{
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+}  
+
+
+
+</string>
+          </property>
           <property name="text">
            <string>Snack</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -178,8 +319,41 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+     background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    font: bold 14px;
+
+}
+QPushButton:pressed{
+    background-color: rgb(50, 50, 50);
+    border-style: inset;
+}  
+QPushButton:hover:!pressed{
+   background-color: rgb(200, 200,200);
+	border-style: inset;
+}
+QPushButton:checked{
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+}  
+
+
+
+</string>
+          </property>
           <property name="text">
            <string>Search...</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -236,7 +410,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="rLabel1">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -263,7 +440,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="rLabel2">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -290,7 +470,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="rLabel3">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -317,7 +500,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="rLabel4">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -344,7 +530,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="rLabel5">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -371,7 +560,10 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="rLabel6">
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Rockwell&quot;;</string>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -392,9 +584,15 @@
      <x>0</x>
      <y>0</y>
      <width>946</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuBack">
+    <property name="title">
+     <string>&lt;-- Back</string>
+    </property>
+   </widget>
+   <addaction name="menuBack"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

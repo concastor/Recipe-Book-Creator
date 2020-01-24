@@ -8,16 +8,56 @@ class BrowseScreen(QtWidgets.QMainWindow):
         super(BrowseScreen, self).__init__()
         uic.loadUi("BrowseScreen.ui", self)
         self.parent = parent
+        self.labelArr = []
 
-        #connect start_button
-        # self.start_button = self.findChild(QtWidgets.QPushButton, 'startButton')
-        # self.start_button.clicked.connect(self.start_pressed)
+        self.testArr = ["steak", "sausage", "pizza", "Curry", "pork chops", "cookies"]
 
-        # self.show()
+        self.back = self.findChild(QtWidgets.QMenu, 'menuBack')
 
-    def start_pressed(self):
-        self.parent.display_main_screen()
-        self.hide()
+        #connect buttons and functions
+        self.breakfast = self.findChild(QtWidgets.QPushButton, 'breakfastButton')
+        self.lunch = self.findChild(QtWidgets.QPushButton, 'lunchButton')
+        self.dinner = self.findChild(QtWidgets.QPushButton, 'dinnerButton')
+        self.snack = self.findChild(QtWidgets.QPushButton, 'snackButton')
+        self.search = self.findChild(QtWidgets.QPushButton, 'searchButton')
+
+        self.breakfast.clicked.connect(self.breakfast_pressed)
+        self.lunch.clicked.connect(self.lunch_pressed)
+        self.dinner.clicked.connect(self.dinner_pressed)
+        self.snack.clicked.connect(self.snack_pressed)
+        self.search.clicked.connect(self.search_pressed)
+
+        self.back.triggered.connect(self.search_pressed)
+
+
+
+        #connect labels
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel1'))
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel2'))
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel3'))
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel4'))
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel5'))
+        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel6'))
+
+
+
+    def breakfast_pressed(self):
+        for i in range(len(self.labelArr)):
+            self.labelArr[i].setText(self.testArr[i])
+
+
+    def lunch_pressed(self):
+        self.labelArr[1].setText("hello")
+
+    def dinner_pressed(self):
+        self.labelArr[2].setText("hello")
+
+    def snack_pressed(self):
+        self.labelArr[3].setText("hello")
+
+    def search_pressed(self):
+        self.labelArr[4].setText("darling")
+
 
 
 
