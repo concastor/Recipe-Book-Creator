@@ -6,7 +6,7 @@ import sys
 class SplashUi(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(SplashUi, self).__init__()
-        uic.loadUi("main page.ui", self)
+        uic.loadUi("UiForms/main page.ui", self)
         self.parent = parent
 
         #connect start_button

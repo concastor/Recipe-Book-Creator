@@ -6,13 +6,11 @@ import sys
 class BrowseScreen(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(BrowseScreen, self).__init__()
-        uic.loadUi("BrowseScreen.ui", self)
+        uic.loadUi("UiForms/BrowseScreen.ui", self)
         self.parent = parent
         self.labelArr = []
 
         self.testArr = ["steak", "sausage", "pizza", "Curry", "pork chops", "cookies"]
-
-        self.back = self.findChild(QtWidgets.QMenu, 'menuBack')
 
         #connect buttons and functions
         self.breakfast = self.findChild(QtWidgets.QPushButton, 'breakfastButton')
@@ -27,12 +25,9 @@ class BrowseScreen(QtWidgets.QMainWindow):
         self.snack.clicked.connect(self.snack_pressed)
         self.search.clicked.connect(self.search_pressed)
 
-        self.back.triggered.connect(self.search_pressed)
-
-
 
         #connect labels
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel1'))
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel1'))
         self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel2'))
         self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel3'))
         self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel4'))
@@ -40,11 +35,9 @@ class BrowseScreen(QtWidgets.QMainWindow):
         self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel6'))
 
 
-
     def breakfast_pressed(self):
         for i in range(len(self.labelArr)):
             self.labelArr[i].setText(self.testArr[i])
-
 
     def lunch_pressed(self):
         self.labelArr[1].setText("hello")

@@ -7,7 +7,7 @@ class main_ui(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(main_ui, self).__init__()
 
-        uic.loadUi("mainScreen.ui", self)
+        uic.loadUi("UiForms/mainScreen.ui", self)
         self.parent = parent
 
         #connect buttons to code
