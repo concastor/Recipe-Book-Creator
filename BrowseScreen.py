@@ -25,15 +25,13 @@ class BrowseScreen(QtWidgets.QMainWindow):
         self.snack.clicked.connect(self.snack_pressed)
         self.search.clicked.connect(self.search_pressed)
 
-
         #connect labels
         self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel1'))
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel2'))
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel3'))
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel4'))
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel5'))
-        self.labelArr.append(self.findChild(QtWidgets.QLabel, 'rLabel6'))
-
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel2'))
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel3'))
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel4'))
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel5'))
+        self.labelArr.append(self.findChild(QtWidgets.QPushButton, 'rLabel6'))
 
     def breakfast_pressed(self):
         for i in range(len(self.labelArr)):
