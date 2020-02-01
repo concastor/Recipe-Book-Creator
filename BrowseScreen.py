@@ -6,7 +6,7 @@ import sys
 class BrowseScreen(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(BrowseScreen, self).__init__()
-        uic.loadUi("UiForms/BrowseScreen.ui", self)
+        self.window = uic.loadUi("UiForms/BrowseScreen.ui", self)
         self.parent = parent
         self.labelArr = []
 

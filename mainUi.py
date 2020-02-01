@@ -20,6 +20,8 @@ class main_ui(QtWidgets.QMainWindow):
 
     def create_button_clicked(self):
         print("fuck")
+        self.parent.display_create_screen()
+        self.hide()
 
     def browse_button_clicked(self):
         print("shit")
